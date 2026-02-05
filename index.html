@@ -10,6 +10,7 @@
         :root {
             --primary-red: #d62828;
             --whatsapp-green: #25d366;
+            --whatsapp-green-dark: #128C7E;
             --soft-pink: #f9dcc4;
             --dark-gold: #b08d57;
             --white: #ffffff;
@@ -106,11 +107,29 @@
             color: var(--dark);
         }
 
+        .product-code {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
         .card-description {
             font-size: 0.95rem;
             color: #555;
             margin-bottom: 20px;
             line-height: 1.4;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
         }
 
         .btn-whatsapp {
@@ -120,16 +139,25 @@
             gap: 10px;
             background-color: var(--whatsapp-green);
             color: white;
-            padding: 14px 20px;
+            padding: 12px 20px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
             transition: background 0.3s, transform 0.2s;
+            font-size: 0.9rem;
         }
 
         .btn-whatsapp:hover {
             background-color: #1ebe57;
             transform: scale(1.05);
+        }
+
+        .btn-whatsapp.secondary {
+            background-color: var(--whatsapp-green-dark);
+        }
+
+        .btn-whatsapp.secondary:hover {
+            background-color: #0d7a6b;
         }
 
         footer {
@@ -140,10 +168,19 @@
             margin-top: 50px;
         }
 
+        .footer-contacts {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .grid { grid-template-columns: 1fr; }
             .card-img-container { height: 320px; }
+            .footer-contacts { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -157,153 +194,905 @@
 <div class="container">
     <div class="grid">
         
+        <!-- Producto 001 -->
         <div class="card">
             <div class="card-img-container">
                 <img src="WhatsApp Image 2026-01-28 at 7.34.41 AM (1).jpeg" alt="Bouquet Reina" class="card-img">
             </div>
             <div class="card-content">
                 <div>
+                    <div class="product-code">Código: 001</div>
                     <h3 class="card-title">Bouquet "La Más Hermosa"</h3>
                     <p class="card-description">Rosas rojas premium con corona y banda personalizada.</p>
                 </div>
-                <a href="https://wa.me/593969328027?text=Hola,%20me%20interesa%20el%20Bouquet%20La%20Mas%20Hermosa" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20001%20(Bouquet%20La%20Mas%20Hermosa)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20001%20(Bouquet%20La%20Mas%20Hermosa)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
             </div>
         </div>
 
+        <!-- Producto 002 -->
         <div class="card">
             <div class="card-img-container">
                 <img src="WhatsApp Image 2026-01-28 at 7.34.41 AM (2).jpeg" alt="Elegancia Roja" class="card-img">
             </div>
             <div class="card-content">
                 <div>
+                    <div class="product-code">Código: 002</div>
                     <h3 class="card-title">Elegancia Roja</h3>
                     <p class="card-description">Ramo de rosas rojas con detalle de nube blanca y papel de lujo.</p>
                 </div>
-                <a href="https://wa.me/593969328027?text=Hola,%20me%20interesa%20el%20ramo%20Elegancia%20Roja" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20002%20(Elegancia%20Roja)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20002%20(Elegancia%20Roja)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
             </div>
         </div>
 
+        <!-- Producto 003 -->
         <div class="card">
             <div class="card-img-container">
                 <img src="WhatsApp Image 2026-01-28 at 7.34.41 AM (3).jpeg" alt="Inicial Personalizada" class="card-img">
             </div>
             <div class="card-content">
                 <div>
+                    <div class="product-code">Código: 003</div>
                     <h3 class="card-title">Inicial Personalizada</h3>
                     <p class="card-description">Tu inicial formada con flores blancas sobre un fondo de rosas rojas.</p>
                 </div>
-                <a href="https://wa.me/593969328027?text=Hola,%20me%20interesa%20la%20Inicial%20Personalizada" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20003%20(Inicial%20Personalizada)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20003%20(Inicial%20Personalizada)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
             </div>
         </div>
 
+        <!-- Producto 004 -->
         <div class="card">
             <div class="card-img-container">
                 <img src="WhatsApp Image 2026-01-28 at 7.34.41 AM.jpeg" alt="Corazón de Girasoles" class="card-img">
             </div>
             <div class="card-content">
                 <div>
+                    <div class="product-code">Código: 004</div>
                     <h3 class="card-title">Corazón de Girasoles</h3>
                     <p class="card-description">Combinación vibrante de girasoles y rosas en forma de corazón.</p>
                 </div>
-                <a href="https://wa.me/593969328027?text=Hola,%20me%20interesa%20el%20Corazon%20de%20Girasoles" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20004%20(Corazón%20de%20Girasoles)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20004%20(Corazón%20de%20Girasoles)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
             </div>
         </div>
 
+        <!-- Producto 005 -->
         <div class="card">
             <div class="card-img-container">
                 <img src="WhatsApp Image 2026-01-28 at 7.34.42 AM (1).jpeg" alt="Cascada de Colores" class="card-img">
             </div>
             <div class="card-content">
                 <div>
+                    <div class="product-code">Código: 005</div>
                     <h3 class="card-title">Cascada de Colores</h3>
                     <p class="card-description">Arreglo artístico con girasoles, rosas y flores de temporada.</p>
                 </div>
-                <a href="https://wa.me/593969328027?text=Hola,%20me%20interesa%20la%20Cascada%20de%20Colores" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20005%20(Cascada%20de%20Colores)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20005%20(Cascada%20de%20Colores)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
             </div>
         </div>
 
+        <!-- Producto 006 -->
         <div class="card">
             <div class="card-img-container">
                 <img src="WhatsApp Image 2026-01-28 at 7.34.42 AM(1).jpeg" alt="Caja Dulce Amor" class="card-img">
             </div>
             <div class="card-content">
                 <div>
+                    <div class="product-code">Código: 006</div>
                     <h3 class="card-title">Caja "Dulce Amor"</h3>
                     <p class="card-description">Exclusiva combinación de rosas y bombones Ferrero Rocher.</p>
                 </div>
-                <a href="https://wa.me/593969328027?text=Hola,%20me%20interesa%20la%20Caja%20Dulce%20Amor" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20006%20(Caja%20Dulce%20Amor)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20006%20(Caja%20Dulce%20Amor)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
             </div>
         </div>
 
+        <!-- Producto 007 -->
         <div class="card">
             <div class="card-img-container">
                 <img src="WhatsApp Image 2026-01-28 at 7.34.37 AM.jpeg" alt="Detalle Ternura" class="card-img">
             </div>
             <div class="card-content">
                 <div>
+                    <div class="product-code">Código: 007</div>
                     <h3 class="card-title">Detalle Ternura</h3>
                     <p class="card-description">Caja premium con rosas, gerberas, globo y peluche de Lotso.</p>
                 </div>
-                <a href="https://wa.me/593969328027?text=Hola,%20me%20interesa%20el%20Detalle%20Ternura" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20007%20(Detalle%20Ternura)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20007%20(Detalle%20Ternura)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
             </div>
         </div>
 
+        <!-- Producto 008 -->
         <div class="card">
             <div class="card-img-container">
                 <img src="WhatsApp Image 2026-01-28 at 7.34.39 AM (1).jpeg" alt="San Valentín Clásico" class="card-img">
             </div>
             <div class="card-content">
                 <div>
+                    <div class="product-code">Código: 008</div>
                     <h3 class="card-title">San Valentín Clásico</h3>
                     <p class="card-description">Caja negra elegante con rosas, peluche y globo de helio.</p>
                 </div>
-                <a href="https://wa.me/593969328027?text=Hola,%20me%20interesa%20el%20San%20Valentin%20Clasico" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20008%20(San%20Valentín%20Clásico)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20008%20(San%20Valentín%20Clásico)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
             </div>
         </div>
 
+        <!-- Producto 009 -->
         <div class="card">
             <div class="card-img-container">
                 <img src="WhatsApp Image 2026-01-28 at 7.34.39 AM.jpeg" alt="Maxi Caja" class="card-img">
             </div>
             <div class="card-content">
                 <div>
+                    <div class="product-code">Código: 009</div>
                     <h3 class="card-title">Maxi Caja de Rosas</h3>
                     <p class="card-description">Caja cilíndrica de lujo repleta de las mejores rosas rojas.</p>
                 </div>
-                <a href="https://wa.me/593969328027?text=Hola,%20me%20interesa%20la%20Maxi%20Caja%20de%20Rosas" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20009%20(Maxi%20Caja%20de%20Rosas)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20009%20(Maxi%20Caja%20de%20Rosas)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
             </div>
         </div>
 
+        <!-- Producto 010 -->
         <div class="card">
             <div class="card-img-container">
                 <img src="WhatsApp Image 2026-01-28 at 7.34.40 AM.jpeg" alt="Ramo Feliz Día" class="card-img">
             </div>
             <div class="card-content">
                 <div>
+                    <div class="product-code">Código: 010</div>
                     <h3 class="card-title">Ramo "Feliz Día"</h3>
                     <p class="card-description">Rosas rojas decoradas con chocolates Ferrero en el centro.</p>
                 </div>
-                <a href="https://wa.me/593969328027?text=Hola,%20me%20interesa%20el%20Ramo%20Feliz%20Dia" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </a>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20010%20(Ramo%20Feliz%20Día)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20010%20(Ramo%20Feliz%20Día)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 011 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.47 AM (3).jpeg" alt="Fantasía Lila" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 011</div>
+                    <h3 class="card-title">Fantasía Lila</h3>
+                    <p class="card-description">Hermosa combinación de rosas lilas y gerberas en tonos pastel con envoltorio morado.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20011%20(Fantasía%20Lila)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20011%20(Fantasía%20Lila)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 012 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.47 AM (4).jpeg" alt="Aniversario Especial" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 012</div>
+                    <h3 class="card-title">Aniversario Especial</h3>
+                    <p class="card-description">Rosas rojas intensas con mariposa dorada y banda conmemorativa.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20012%20(Aniversario%20Especial)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20012%20(Aniversario%20Especial)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 013 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.47 AM (5).jpeg" alt="Sol de mi Vida" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 013</div>
+                    <h3 class="card-title">Sol de mi Vida</h3>
+                    <p class="card-description">Radiante bouquet de girasoles envueltos delicadamente en malla blanca.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20013%20(Sol%20de%20mi%20Vida)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20013%20(Sol%20de%20mi%20Vida)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 014 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.47 AM.jpeg" alt="Cumpleaños Radiante" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 014</div>
+                    <h3 class="card-title">Cumpleaños Radiante</h3>
+                    <p class="card-description">Girasoles vibrantes acompañados de un globo personalizado estilo burbuja.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20014%20(Cumpleaños%20Radiante)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20014%20(Cumpleaños%20Radiante)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 015 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.48 AM (1).jpeg" alt="Reina de Corazones" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 015</div>
+                    <h3 class="card-title">Reina de Corazones</h3>
+                    <p class="card-description">Lujoso arreglo de rosas rojas coronado con tiara y mariposas doradas.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20015%20(Reina%20de%20Corazones)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20015%20(Reina%20de%20Corazones)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 016 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.48 AM (2).jpeg" alt="Dulzura Rosa" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 016</div>
+                    <h3 class="card-title">Dulzura Rosa</h3>
+                    <p class="card-description">Selección de rosas en tonos rosa pastel, nude y vintage. Elegancia pura.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20016%20(Dulzura%20Rosa)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20016%20(Dulzura%20Rosa)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 017 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.48 AM (3).jpeg" alt="Amor Bicolor" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 017</div>
+                    <h3 class="card-title">Amor Bicolor</h3>
+                    <p class="card-description">Elegante contraste de rosas rojas y blancas envueltas en papel negro.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20017%20(Amor%20Bicolor)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20017%20(Amor%20Bicolor)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 018 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.48 AM (4).jpeg" alt="Inicial Gigante" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 018</div>
+                    <h3 class="card-title">Inicial Gigante</h3>
+                    <p class="card-description">Gran bouquet de rosas con tu inicial personalizada en flores blancas al centro.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20018%20(Inicial%20Gigante)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20018%20(Inicial%20Gigante)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 019 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.48 AM (5).jpeg" alt="Ramo de la Fortuna" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 019</div>
+                    <h3 class="card-title">Ramo de la Fortuna</h3>
+                    <p class="card-description">Sorprendente arreglo buchón de rosas rojas intercaladas con billetes reales.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20019%20(Ramo%20de%20la%20Fortuna)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20019%20(Ramo%20de%20la%20Fortuna)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 020 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.48 AM (6).jpeg" alt="Capybara Love" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 020</div>
+                    <h3 class="card-title">Capybara Love</h3>
+                    <p class="card-description">Divertido y tierno arreglo de girasoles con peluche de capibara y globo.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20020%20(Capybara%20Love)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20020%20(Capybara%20Love)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 021 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.48 AM.jpeg" alt="Gran Jardín Floral" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 021</div>
+                    <h3 class="card-title">Gran Jardín Floral</h3>
+                    <p class="card-description">Espectacular arreglo alto con girasoles, rosas rosas, rojas y follaje fino.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20021%20(Gran%20Jardín%20Floral)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20021%20(Gran%20Jardín%20Floral)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 022 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.49 AM (1).jpeg" alt="Detalle Feliz Cumpleaños" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 022</div>
+                    <h3 class="card-title">Detalle Feliz Cumpleaños</h3>
+                    <p class="card-description">Ramo de rosas rojas con girasol central y banda de felicitación.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20022%20(Detalle%20Feliz%20Cumpleaños)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20022%20(Detalle%20Feliz%20Cumpleaños)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 023 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.49 AM (2).jpeg" alt="Domo Happy Birthday" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 023</div>
+                    <h3 class="card-title">Domo Happy Birthday</h3>
+                    <p class="card-description">Elegante domo de rosas rojas con diamantes de fantasía y topper dorado.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20023%20(Domo%20Happy%20Birthday)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20023%20(Domo%20Happy%20Birthday)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 024 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.49 AM (3).jpeg" alt="Girasoles y Chocolate" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 024</div>
+                    <h3 class="card-title">Girasoles y Chocolate</h3>
+                    <p class="card-description">Caja corazón de chocolates rodeada de hermosos girasoles.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20024%20(Girasoles%20y%20Chocolate)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20024%20(Girasoles%20y%20Chocolate)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 025 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.49 AM (4).jpeg" alt="Inicial K y Rosas" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 025</div>
+                    <h3 class="card-title">Inicial y Rosas</h3>
+                    <p class="card-description">Bouquet negro con rosas rojas y la inicial de tu persona favorita en el centro.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20025%20(Inicial%20y%20Rosas)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20025%20(Inicial%20y%20Rosas)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 026 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.49 AM (5).jpeg" alt="Caja Roja Elegante" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 026</div>
+                    <h3 class="card-title">Caja Roja Elegante</h3>
+                    <p class="card-description">Arreglo cuadrado compacto de rosas rojas con detalle de lazo.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20026%20(Caja%20Roja%20Elegante)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20026%20(Caja%20Roja%20Elegante)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 027 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.49 AM (6).jpeg" alt="Amor de Mamá" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 027</div>
+                    <h3 class="card-title">Amor de Mamá</h3>
+                    <p class="card-description">Tierno cilindro rosa con flores variadas, peluche de abuelita y globo.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20027%20(Amor%20de%20Mamá)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20027%20(Amor%20de%20Mamá)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 028 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.49 AM.jpeg" alt="Ramo Buchón con Fresas" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 028</div>
+                    <h3 class="card-title">Buchón Fresas y Dinero</h3>
+                    <p class="card-description">Lujoso ramo de rosas rojas, fresas frescas y billetes decorativos.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20028%20(Buchón%20Fresas%20y%20Dinero)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20028%20(Buchón%20Fresas%20y%20Dinero)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 029 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.50 AM (1).jpeg" alt="Te Amo con Osito" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 029</div>
+                    <h3 class="card-title">Te Amo con Osito</h3>
+                    <p class="card-description">Arreglo alto de girasoles y rosas con oso de peluche y globo de amor.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20029%20(Te%20Amo%20con%20Osito)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20029%20(Te%20Amo%20con%20Osito)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 030 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.50 AM (2).jpeg" alt="Jardín de Rosas y Ferrero" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 030</div>
+                    <h3 class="card-title">Jardín de Rosas y Ferrero</h3>
+                    <p class="card-description">Gran canasta repleta de rosas rojas con una caja de Ferrero Rocher al centro.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20030%20(Jardín%20de%20Rosas%20y%20Ferrero)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20030%20(Jardín%20de%20Rosas%20y%20Ferrero)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 031 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.50 AM (3).jpeg" alt="Panda Cumpleañero" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 031</div>
+                    <h3 class="card-title">Panda Cumpleañero</h3>
+                    <p class="card-description">Hermoso arreglo de girasoles con oso panda gigante y globo festivo.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20031%20(Panda%20Cumpleañero)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20031%20(Panda%20Cumpleañero)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 032 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.50 AM (4).jpeg" alt="Sueños de Lotso" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 032</div>
+                    <h3 class="card-title">Sueños de Lotso</h3>
+                    <p class="card-description">Bouquet rosa con peluche de Lotso dormido y rosas en tonos pastel.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20032%20(Sueños%20de%20Lotso)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20032%20(Sueños%20de%20Lotso)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 033 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.50 AM (5).jpeg" alt="Celebración Solar" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 033</div>
+                    <h3 class="card-title">Celebración Solar</h3>
+                    <p class="card-description">Girasoles brillantes con globos de feliz cumpleaños y mariposas doradas.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20033%20(Celebración%20Solar)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20033%20(Celebración%20Solar)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 034 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.50 AM (6).jpeg" alt="Propuesta Romántica" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 034</div>
+                    <h3 class="card-title">Propuesta Romántica</h3>
+                    <p class="card-description">Ramo de rosas rosas con banda "¿Quieres ser mi novia?" y mariposas.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20034%20(Propuesta%20Romántica)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20034%20(Propuesta%20Romántica)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 035 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.50 AM.jpeg" alt="Zafiro Dulce" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 035</div>
+                    <h3 class="card-title">Zafiro Dulce</h3>
+                    <p class="card-description">Exóticas rosas azules rodeando un corazón de chocolates Ferrero Rocher.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20035%20(Zafiro%20Dulce)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20035%20(Zafiro%20Dulce)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 036 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.51 AM (1).jpeg" alt="Luz y Pureza" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 036</div>
+                    <h3 class="card-title">Luz y Pureza</h3>
+                    <p class="card-description">Combinación clásica y elegante de rosas amarillas y blancas.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20036%20(Luz%20y%20Pureza)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20036%20(Luz%20y%20Pureza)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 037 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.51 AM (2).jpeg" alt="Pasión Clásica" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 037</div>
+                    <h3 class="card-title">Pasión Clásica</h3>
+                    <p class="card-description">Bouquet tradicional de rosas rojas frescas con envoltorio premium.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20037%20(Pasión%20Clásica)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20037%20(Pasión%20Clásica)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 038 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.51 AM (3).jpeg" alt="Encanto Floral" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 038</div>
+                    <h3 class="card-title">Encanto Floral</h3>
+                    <p class="card-description">Mezcla alegre de girasoles y rosas rosadas con lluvia blanca.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20038%20(Encanto%20Floral)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20038%20(Encanto%20Floral)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 039 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.51 AM (4).jpeg" alt="Cielo y Sol" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 039</div>
+                    <h3 class="card-title">Cielo y Sol</h3>
+                    <p class="card-description">Contrastante arreglo de rosas azules con un girasol central.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20039%20(Cielo%20y%20Sol)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20039%20(Cielo%20y%20Sol)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 040 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.51 AM (5).jpeg" alt="Alegría Dorada" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 040</div>
+                    <h3 class="card-title">Alegría Dorada</h3>
+                    <p class="card-description">Ramo de rosas amarillas intensas con tarjeta de dedicatoria especial.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20040%20(Alegría%20Dorada)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20040%20(Alegría%20Dorada)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 041 -->
+        <div class="card">
+            <div class="card-img-container">
+                <img src="WhatsApp Image 2026-02-03 at 6.41.51 AM.jpeg" alt="Rayito de Sol" class="card-img">
+            </div>
+            <div class="card-content">
+                <div>
+                    <div class="product-code">Código: 041</div>
+                    <h3 class="card-title">Rayito de Sol</h3>
+                    <p class="card-description">Caja celeste "Feliz Cumpleaños" con rosas amarillas, girasoles y detalles en azul.</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/593969328027?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20041%20(Rayito%20de%20Sol)" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (1)
+                    </a>
+                    <a href="https://wa.me/593985310439?text=Hola,%20necesito%20información%20sobre%20el%20producto%20código%20041%20(Rayito%20de%20Sol)" class="btn-whatsapp secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar (2)
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -312,7 +1101,10 @@
 
 <footer>
     <p>&copy; 2026 Tu Florería - Catálogo San Valentín</p>
-    <p><i class="fab fa-whatsapp"></i> +593 96 932 8027</p>
+    <div class="footer-contacts">
+        <p><i class="fab fa-whatsapp"></i> +593 96 932 8027</p>
+        <p><i class="fab fa-whatsapp"></i> +593 98 531 0439</p>
+    </div>
 </footer>
 
 </body>
